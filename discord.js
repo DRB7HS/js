@@ -66,4 +66,4 @@ client.once('ready', async () => {
     setInterval(sendAdkar, 15 * 60 * 1000);
 });
 
-client.login(process.env.TOKEN);
+client.login(MTU0MjQzMTYxNDA2NjIzMzM3NA.G88ERq.zBXUIixjKa1pY2w2KYC1AD88I5B0Ao2_bo7a2k);
