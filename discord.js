@@ -43,8 +43,8 @@ client.once('ready', async () => {
     }, 5 * 60 * 1000);
 
     const channelId = '1542608227399630909';
-    
-    setInterval(() => {
+
+    const sendAdkar = () => {
         const channel = client.channels.cache.get(channelId);
         if (!channel) return;
 
@@ -59,7 +59,11 @@ client.once('ready', async () => {
             .setFooter({ text: 'TVX — اذگــار', iconURL: client.user.displayAvatarURL() });
 
         channel.send({ embeds: [embed] });
-    }, 15 * 60 * 1000);
+    };
+
+    sendAdkar();
+
+    setInterval(sendAdkar, 15 * 60 * 1000);
 });
 
 client.login(process.env.TOKEN);
